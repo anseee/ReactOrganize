@@ -1,4 +1,4 @@
-// Virtual Dom에서 컴포넌트를 감지해 낼때 효율적으로 비교하기 위해서 
+// Virtual Dom에서 컴포넌트를 감지해 낼때 효율적으로 비교하기 위해서
 // 컴포넌트 내부는 하나의 DOM 트리로 이루어져야 한다.
 // <div> 사용 or Fragment 사용
 
@@ -12,7 +12,7 @@
 //       <h1>Hello React!</h1>
 //     ) : (
 //       <h2>How are you?</h2>
-//     )} 
+//     )}
 //     </>
 //   )
 // }
@@ -24,7 +24,6 @@
 //     {name === 'reacta' && <h1>This is react</h1>}
 //   </div>
 // }
-
 
 // function App() {
 //   const name = 'react';
@@ -61,16 +60,29 @@
 // }
 
 // 주석
+// function App() {
+//   const name = "react";
+//   return (
+//     <>
+//       {/* 주석은 이렇게 작성한다 */}
+//       <div className="react">{name}</div>
+//       <input />
+//     </>
+//   );
+// }
+
+// prettier, eslint
+// shift + option + f or press F1 -> input format and press enter key
 function App() {
-  const name = "react";
+  const name = 'react';
+
   return (
-    <>
-      {/* 주석은 이렇게 작성한다 */}
+    <div>
       <div className="react">{name}</div>
-      // 이렇게 작성하거나
-      /* 이렇게하면 페이지에 그대로 노출됨 */
-      <input />
-    </>
+      <h1>들여쓰기가 이상함</h1>
+      <h2>코드</h2>
+      <p>입니다.</p>
+    </div>
   );
 }
 
